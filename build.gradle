@@ -1,7 +1,6 @@
 plugins {
     id 'com.jfrog.bintray'
     id 'distribution'
-    id 'maven-publish'
     id 'signing'
 }
 
@@ -15,6 +14,14 @@ wrapper {
     distributionType = Wrapper.DistributionType.ALL
 }
 
+static getCustomArtifactId(project) {
+    if (project.name == 'gradle-plugin') {
+        return 'proguard-gradle'
+    } else {
+        return "proguard-$project.name"
+    }
+}
+
 allprojects { Project project ->
     pluginManager.withPlugin('maven-publish') {
         configure(project) {
@@ -22,12 +29,28 @@ allprojects { Project project ->
                 publications {
                     create(project.name, MavenPublication) {
                         pom {
-                            name = "[$group] $artifactId"
+                            artifactId = getCustomArtifactId(project)
+                            name = "$group:$artifactId"
+                            url = 'https://www.guardsquare.com/proguard'
+                            licenses {
+                                license {
+                                    name = 'GNU General Public License, Version 2'
+                                    url = 'https://www.gnu.org/licenses/gpl-2.0.txt'
+                                    distribution = 'repo'
+                                }
+                            }
+                            issueManagement {
+                                system = 'Github Tracker'
+                                url = 'https://github.com/Guardsquare/proguard/issues'
+                            }
+                            scm {
+                                url = 'https://github.com/Guardsquare/proguard.git'
+                                connection = 'scm:git:https://github.com/Guardsquare/proguard.git'
+                            }
                             developers {
                                 developer {
                                     id = 'lafortune'
                                     name = 'Eric Lafortune'
-                                    url = 'https://www.guardsquare.com/proguard'
                                     organization = 'Guardsquare'
                                     organizationUrl = 'https://www.guardsquare.com/'
                                     roles = ['Project Administrator', 'Developer']
@@ -98,9 +121,8 @@ allprojects { Project project ->
     afterEvaluate {
         if (pluginManager.hasPlugin('com.jfrog.bintray') && pluginManager.hasPlugin('maven-publish')) {
             configure(project) {
+                Publication pub = project.publishing.publications.getByName(project.name)
                 bintray {
-                    Publication rootPub = rootProject.publishing.publications.parent
-                    Publication pub = project.publishing.publications.getByName(project.name)
                     user = findProperty('PROGUARD_BINTRAY_USER')
                     key = findProperty('PROGUARD_BINTRAY_KEY')
                     publications = [project.name]
@@ -111,42 +133,15 @@ allprojects { Project project ->
                         name = "$project.group:$pub.artifactId"
                         desc = pub.artifactId
                         licenses = ['GPL-2.0']
-                        websiteUrl = rootPub.pom.url.get()
-                        issueTrackerUrl = rootPub.pom.issueManagement.url.get()
-                        vcsUrl = rootPub.pom.scm.url.get()
+                        websiteUrl = pub.pom.url.get()
+                        issueTrackerUrl = pub.pom.issueManagement.url.get()
+                        vcsUrl = pub.pom.scm.url.get()
                         version {
                             name = project.version
                             gpg.sign = true
                             released = new Date()
                         }
                     }
-                }
-            }
-        }
-    }
-}
-
-publishing {
-    publications {
-        parent {
-            artifactId = "proguard-parent"
-            pom {
-                description = 'ProGuard is a free Java class file shrinker, optimizer, obfuscator, and preverifier.'
-                url = 'https://www.guardsquare.com/proguard'
-                licenses {
-                    license {
-                        name = 'GNU General Public License, Version 2'
-                        url = 'https://www.gnu.org/licenses/gpl-2.0.txt'
-                        distribution = 'repo'
-                    }
-                }
-                issueManagement {
-                    system = 'Github Tracker'
-                    url = 'https://github.com/Guardsquare/proguard/issues'
-                }
-                scm {
-                    url = 'https://github.com/Guardsquare/proguard.git'
-                    connection = 'scm:git:https://github.com/Guardsquare/proguard.git'
                 }
             }
         }

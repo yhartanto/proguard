@@ -47,11 +47,3 @@ dependencies {
     compile gradleApi()
     compile localGroovy()
 }
-
-publishing {
-    publications {
-        getByName('gradle-plugin') {
-            artifactId = 'proguard-gradle'
-        }
-    }
-}
