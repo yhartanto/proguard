@@ -11,7 +11,10 @@ buildscript {
             // Override the default version of ProGuard
             // with the most recent one.
             dependencySubstitution {
-                substitute module('net.sf.proguard:proguard-gradle') with module('com.guardsquare:proguard-gradle:7.0.0')
+                //                substitute module('net.sf.proguard:proguard-gradle') with module('com.guardsquare:proguard-gradle:7.0.0')
+                substitute module('net.sf.proguard:proguard-gradle') with module('net.sf.proguard:proguard-gradle:6.2.2')
+//                substitute module('net.sf.proguard:proguard-gradle') with module('net.sf.proguard:proguard-gradle:5.3.2')
+
             }
         }
     }
@@ -20,7 +23,7 @@ buildscript {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion   28
 
     signingConfigs {
         debug {
@@ -33,6 +36,7 @@ android {
 
     defaultConfig {
         signingConfig signingConfigs.debug
+        minSdkVersion       24
     }
 
     sourceSets {
@@ -58,6 +62,10 @@ android {
             proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
             proguardFile 'proguard-project.txt'
         }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 }
 
