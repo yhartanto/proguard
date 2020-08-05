@@ -11,8 +11,8 @@ buildscript {
             // Override the default version of ProGuard
             // with the most recent one.
             dependencySubstitution {
-                substitute module('net.sf.proguard:proguard-gradle') with module('com.guardsquare:proguard-gradle:7.0.0')
-
+                //                substitute module('net.sf.proguard:proguard-gradle') with module('com.guardsquare:proguard-gradle:7.0.0')
+                substitute module('net.sf.proguard:proguard-gradle') with module('net.sf.proguard:proguard-gradle:6.2.2')
             }
         }
     }
