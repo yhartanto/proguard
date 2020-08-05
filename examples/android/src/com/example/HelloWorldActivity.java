@@ -10,14 +10,16 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 /**
  * Sample activity that displays "Hello world!".
  */
-public class HelloWorldActivity extends Activity
-{
+public class HelloWorldActivity extends Activity {
+    private FooBar fooBar;
+
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Display the message.
@@ -25,5 +27,8 @@ public class HelloWorldActivity extends Activity
         view.setText("Hello World");
         view.setGravity(Gravity.CENTER);
         setContentView(view);
+        fooBar = new FooBar(view);
+
+        Arrays.asList(1).stream().forEach(fooBar::foo);
     }
 }

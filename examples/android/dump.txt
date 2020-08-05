@@ -1,0 +1,285 @@
+_____________________________________________________________________
+- Program class: a
+  Superclass:    java/lang/Object
+  Major version: 0x34
+  Minor version: 0x0
+    = target 1.8
+  Access flags:  0x20031
+    = public final class a extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 23):
+  - String [Foo]
+  - Class [a]
+  - Class [android/widget/TextView]
+  - Class [java/lang/Object]
+  - Fieldref [a.a Landroid/widget/TextView;]
+  - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [java/lang/Object.<init> ()V]
+  - NameAndType [<init> ()V]
+  - NameAndType [a Landroid/widget/TextView;]
+  - NameAndType [setText (Ljava/lang/CharSequence;)V]
+  - Utf8 [()V]
+  - Utf8 [(I)V]
+  - Utf8 [(Landroid/widget/TextView;)V]
+  - Utf8 [(Ljava/lang/CharSequence;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Foo]
+  - Utf8 [Landroid/widget/TextView;]
+  - Utf8 [a]
+  - Utf8 [android/widget/TextView]
+  - Utf8 [java/lang/Object]
+  - Utf8 [setText]
+
+Fields (count = 1):
+  - Field:        a Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView a
+
+Methods (count = 2):
+  - Method:       <init>(Landroid/widget/TextView;)V
+    Access flags: 0x1
+      = public a(android.widget.TextView)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] aload_0 v0
+      [5] aload_1 v1
+      [6] putfield #5
+        - Fieldref [a.a Landroid/widget/TextView;]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(I)V
+    Access flags: 0x10
+      = final void a(int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #5
+        - Fieldref [a.a Landroid/widget/TextView;]
+      [4] ldc #1
+        - String [Foo]
+      [6] invokevirtual #6
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/example/HelloWorldActivity
+  Superclass:    android/app/Activity
+  Major version: 0x34
+  Minor version: 0x0
+    = target 1.8
+  Access flags:  0x21
+    = public class com.example.HelloWorldActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 96):
+  - String [Hello World]
+  - Class [a]
+  - Class [android/app/Activity]
+  - Class [android/widget/TextView]
+  - Class [com/example/HelloWorldActivity]
+  - Class [java/lang/Integer]
+  - Class [java/lang/Object]
+  - Class [java/lang/invoke/LambdaMetafactory]
+  - Class [java/lang/invoke/MethodHandles]
+  - Class [java/lang/invoke/MethodHandles$Lookup]
+  - Class [java/util/Arrays]
+  - Class [java/util/List]
+  - Class [java/util/stream/Stream]
+  - Fieldref [com/example/HelloWorldActivity.a La;]
+  - Methodref [a.<init> (Landroid/widget/TextView;)V]
+  - Methodref [a.a (I)V]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/widget/TextView.<init> (Landroid/content/Context;)V]
+  - Methodref [android/widget/TextView.setGravity (I)V]
+  - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [com/example/HelloWorldActivity.setContentView (Landroid/view/View;)V]
+  - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+  - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
+  - Methodref [java/lang/invoke/LambdaMetafactory.metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;]
+  - Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
+  - InterfaceMethodref [java/util/List.stream ()Ljava/util/stream/Stream;]
+  - InterfaceMethodref [java/util/stream/Stream.forEach (Ljava/util/function/Consumer;)V]
+  - InvokeDynamic [bootstrap method index = 0]:
+    - NameAndType [accept (La;)Ljava/util/function/Consumer;]
+  - MethodHandle [kind = 5]:
+    - Methodref [a.a (I)V]
+  - MethodHandle [kind = 6]:
+    - Methodref [java/lang/invoke/LambdaMetafactory.metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;)V]
+  - NameAndType [<init> (Landroid/widget/TextView;)V]
+  - NameAndType [a (I)V]
+  - NameAndType [a La;]
+  - NameAndType [accept (La;)Ljava/util/function/Consumer;]
+  - NameAndType [asList ([Ljava/lang/Object;)Ljava/util/List;]
+  - NameAndType [forEach (Ljava/util/function/Consumer;)V]
+  - NameAndType [getClass ()Ljava/lang/Class;]
+  - NameAndType [metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [setContentView (Landroid/view/View;)V]
+  - NameAndType [setGravity (I)V]
+  - NameAndType [setText (Ljava/lang/CharSequence;)V]
+  - NameAndType [stream ()Ljava/util/stream/Stream;]
+  - NameAndType [valueOf (I)Ljava/lang/Integer;]
+  - MethodType [(Ljava/lang/Integer;)V]
+  - MethodType [(Ljava/lang/Object;)V]
+  - Utf8 [()Ljava/lang/Class;]
+  - Utf8 [()Ljava/util/stream/Stream;]
+  - Utf8 [()V]
+  - Utf8 [(I)Ljava/lang/Integer;]
+  - Utf8 [(I)V]
+  - Utf8 [(La;)Ljava/util/function/Consumer;]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [(Landroid/view/View;)V]
+  - Utf8 [(Landroid/widget/TextView;)V]
+  - Utf8 [(Ljava/lang/CharSequence;)V]
+  - Utf8 [(Ljava/lang/Integer;)V]
+  - Utf8 [(Ljava/lang/Object;)V]
+  - Utf8 [(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;]
+  - Utf8 [(Ljava/util/function/Consumer;)V]
+  - Utf8 [([Ljava/lang/Object;)Ljava/util/List;]
+  - Utf8 [<init>]
+  - Utf8 [BootstrapMethods]
+  - Utf8 [Code]
+  - Utf8 [Hello World]
+  - Utf8 [InnerClasses]
+  - Utf8 [La;]
+  - Utf8 [Lookup]
+  - Utf8 [a]
+  - Utf8 [accept]
+  - Utf8 [android/app/Activity]
+  - Utf8 [android/widget/TextView]
+  - Utf8 [asList]
+  - Utf8 [com/example/HelloWorldActivity]
+  - Utf8 [forEach]
+  - Utf8 [getClass]
+  - Utf8 [java/lang/Integer]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/lang/invoke/LambdaMetafactory]
+  - Utf8 [java/lang/invoke/MethodHandles]
+  - Utf8 [java/lang/invoke/MethodHandles$Lookup]
+  - Utf8 [java/util/Arrays]
+  - Utf8 [java/util/List]
+  - Utf8 [java/util/stream/Stream]
+  - Utf8 [metafactory]
+  - Utf8 [onCreate]
+  - Utf8 [setContentView]
+  - Utf8 [setGravity]
+  - Utf8 [setText]
+  - Utf8 [stream]
+  - Utf8 [valueOf]
+
+Fields (count = 1):
+  - Field:        a La;
+    Access flags: 0x2
+      = private a a
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public HelloWorldActivity()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #17
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 82, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #18
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] new #4
+        - Class [android/widget/TextView]
+      [8] dup
+      [9] aload_0 v0
+      [10] invokespecial #19
+        - Methodref [android/widget/TextView.<init> (Landroid/content/Context;)V]
+      [13] dup
+      [14] astore_1 v1
+      [15] ldc #1
+        - String [Hello World]
+      [17] invokevirtual #21
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [20] aload_1 v1
+      [21] bipush 17
+      [23] invokevirtual #20
+        - Methodref [android/widget/TextView.setGravity (I)V]
+      [26] aload_0 v0
+      [27] aload_1 v1
+      [28] invokevirtual #22
+        - Methodref [com/example/HelloWorldActivity.setContentView (Landroid/view/View;)V]
+      [31] aload_0 v0
+      [32] new #2
+        - Class [a]
+      [35] dup
+      [36] aload_1 v1
+      [37] invokespecial #15
+        - Methodref [a.<init> (Landroid/widget/TextView;)V]
+      [40] putfield #14
+        - Fieldref [com/example/HelloWorldActivity.a La;]
+      [43] iconst_1
+      [44] anewarray #6
+        - Class [java/lang/Integer]
+      [47] dup
+      [48] iconst_0
+      [49] iconst_1
+      [50] invokestatic #23
+        - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [53] aastore
+      [54] invokestatic #26
+        - Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
+      [57] invokeinterface #27, 256
+        - InterfaceMethodref [java/util/List.stream ()Ljava/util/stream/Stream;]
+      [62] aload_0 v0
+      [63] getfield #14
+        - Fieldref [com/example/HelloWorldActivity.a La;]
+      [66] dup
+      [67] invokevirtual #24
+        - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
+      [70] pop
+      [71] invokedynamic #29, 0
+        - InvokeDynamic [bootstrap method index = 0]:
+          - NameAndType [accept (La;)Ljava/util/function/Consumer;]
+      [76] invokeinterface #28, 512
+        - InterfaceMethodref [java/util/stream/Stream.forEach (Ljava/util/function/Consumer;)V]
+      [81] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 2):
+  - Bootstrap methods attribute (count = 1):
+    - BootstrapMethodInfo (argument count = 3):
+      - MethodHandle [kind = 6]:
+        - Methodref [java/lang/invoke/LambdaMetafactory.metafactory (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;]
+      - MethodType [(Ljava/lang/Object;)V]
+      - MethodHandle [kind = 5]:
+        - Methodref [a.a (I)V]
+      - MethodType [(Ljava/lang/Integer;)V]
+  - Inner classes attribute (count = 1):
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      - Class [java/lang/invoke/MethodHandles$Lookup]
+      - Class [java/lang/invoke/MethodHandles]
+      - Utf8 [Lookup]
+

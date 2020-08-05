@@ -16,6 +16,8 @@
 #-dontobfuscate
 
 # Specifically target Android.
+-repackageclasses ''
+-allowaccessmodification
 
 -android
 

@@ -5,3 +5,7 @@
 build
 local.properties
 /lib/
+gradle
+gradlew
+gradlew.bat
+android.iml
