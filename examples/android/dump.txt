@@ -4,7 +4,7 @@ _____________________________________________________________________
   Major version: 0x34
   Minor version: 0x0
     = target 1.8
-  Access flags:  0x20031
+  Access flags:  0x31
     = public final class a extends java.lang.Object
 
 Interfaces (count = 0):
@@ -55,8 +55,8 @@ Methods (count = 2):
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   - Method:       a(I)V
-    Access flags: 0x10
-      = final void a(int)
+    Access flags: 0x11
+      = public final void a(int)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
@@ -276,7 +276,7 @@ Class file attributes (count = 2):
       - MethodHandle [kind = 5]:
         - Methodref [a.a (I)V]
       - MethodType [(Ljava/lang/Integer;)V]
-  - Inner classes attribute (count = 1):
+  - Inner classes attribute (count = 1)
     - InnerClassesInfo:
       Access flags:  0x19 = public static final 
       - Class [java/lang/invoke/MethodHandles$Lookup]
